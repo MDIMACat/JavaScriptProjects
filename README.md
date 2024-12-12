@@ -13,7 +13,7 @@ Please click on the following link to view project: [Color Scheme Switcher](http
 
 
 ## Screenshots 🖼️
- ![my screenshot](./images/Screenshot%20from%202024-12-12%2015-56-24.png)
+ ![my screenshot](./images/Screenshot%20from%202024-12-12%2016-08-27.png)
 
 
 ### License 📄
