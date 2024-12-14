@@ -6,33 +6,66 @@
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="./src/public/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parkinsans:wght@300..800&family=Playwrite+DE+Grund+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <div class="calculator">
         <div class="information-section">
             <h4>Bill Amount</h4>
-            <label for="bill-amount"></label>
-            <input type="number" id="bill-amount" name="bill-amount" min="1" max="100000" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000) this.value = ''; " placeholder="R" required>
-
+            <div class="bill-amount-area">
+                <label for="bill-amount"></label>
+                <input 
+                    type="number" 
+                    id="bill-amount" 
+                    name="bill-amount" 
+                    min="1" 
+                    max="100000" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000) this.value = '';" 
+                    placeholder="R" 
+                    required
+                >
+                <div class="bill-submit-btn">
+                    <button type="submit" class="balSubBtn">Submit</button>
+                </div>
+            </div>
+            
             <h4>Tip Amount</h4>
             <div class="tip-buttons">
-                <button type="submit">5%</button>
-                <button type="submit">10%</button>
-                <button type="submit">15%</button>
+                <button type="submit" data-percent="5">5%</button>
+                <button type="submit" data-percent="10">10%</button>
+                <button type="submit" data-percent="15">15%</button>
             </div>
             <div class="custom-tip">
-                <label for="Tip-amount">Custom Amount:</label><br>
-                <input type="number" id="tip-amount" name="tip-amount" min="1" max="100" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100) this.value = ''; " placeholder="Tip Amount" required>        
-                <button type="submit">Submit</button>
+                <label for="tip-amount">Custom Amount:</label><br>
+                <input 
+                    type="number" 
+                    id="tip-amount" 
+                    name="tip-amount" 
+                    min="1" 
+                    max="100"
+                    value="0" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100) this.value = '';" 
+                    placeholder="Tip Amount" 
+                    required
+                >
+                <button type="submit" class="custom-tip-submit-btn">Submit</button>
             </div>
 
             <div class="persons">
-                <label for="people-amount"> How many people are paying: </label><br>
-                <input type="number" id="people-amount" name="people-amount" min="1" max="10" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 10) this.value = ''; " placeholder="People" required>
-                <button type="submit">Submit</button>     
+                <label for="people">How many people are paying:</label><br>
+                <input 
+                    type="number" 
+                    id="people" 
+                    name="people" 
+                    min="1" 
+                    max="10" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 10) this.value = '';" 
+                    placeholder="People" 
+                    value="0" 
+                    required
+                >
+                <button type="submit" class="people-amount-btn">Submit</button>
             </div>
 
             <div class="rate-service">
@@ -46,12 +79,11 @@
                 </div>
             </div>
         </div>
+
         <div class="per-person-section">
-            <p class="price">R 0,00 <span class="per-person">/ per person</span></p>
+            <p><span class="per-person-price">R 0,00</span> <span class="per-person">/ per person</span></p>
         </div>
     </div>
-
-
 
     <script src="./src/index.js"></script>
 </body>

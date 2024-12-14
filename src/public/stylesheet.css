@@ -34,7 +34,7 @@ body {
     color: #fff;
 }
 
-.price {
+.per-person-price {
     font-size: xx-large;
 }
 span.per-person {
@@ -50,13 +50,16 @@ span.per-person {
 }
 
 #bill-amount {
-    margin-top: -20px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 10px;
-    border: none;
-    border-radius: 9px;
-    background-color: #edf2f4;
+ margin-top: 0px;
+ margin-left: 28px;
+}
+
+.balSubBtn {
+    margin-left: 3px;
+}
+
+.bill-amount-area {
+    display: flex;
 }
 
 .rate-service {
@@ -75,6 +78,10 @@ button {
 button:hover{
     background-color: #0091da;
     cursor: pointer;
+}
+
+button[data-clicked] {
+    background-color: #0091da;
 }
 
 .tip-buttons {
