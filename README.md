@@ -13,7 +13,7 @@ Please click on the following link to view project: [Tip Calculator]()
 
 
 ## Screenshots 🖼️
- ![my screenshot]()
+ ![my screenshot](./images/Screenshot%20from%202024-12-14%2019-34-18.png)
 
 
 ### License 📄

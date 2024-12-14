@@ -8,6 +8,7 @@ class TipCalculator {
     init() {
         this.setupRatings();
         this.setupBalanceAmount();
+        this.clearFileds()
     }
 
     setupRatings() {
@@ -102,30 +103,60 @@ class TipCalculator {
     }
 
     calculatePerPerson(numberOfPeople, tipValue, balanceAmount){
-        let perPersonAmount = 0
-        const numNumberOfPeople = Number(numberOfPeople)
-        const numTipValue = Number(tipValue) / 100
-        const numBalanceValue  = Number(balanceAmount)
-
-        const interest = numBalanceValue * numTipValue
-        const totalAmount = numBalanceValue +  interest
-
+        let perPersonAmount = 0;
+        const numNumberOfPeople = Number(numberOfPeople);
+        const numTipValue = Number(tipValue) / 100;
+        const numBalanceValue = Number(balanceAmount);
+    
+        const interest = numBalanceValue * numTipValue;
+        const totalAmount = numBalanceValue + interest;
+    
         if(numNumberOfPeople === 0){
-            perPersonAmount = totalAmount
+            perPersonAmount = totalAmount;
         } else {
-            perPersonAmount = totalAmount / numNumberOfPeople
+            perPersonAmount = totalAmount / numNumberOfPeople;
         }
         
-
-        perPersonAmount.toFixed(2)
-
-        const perPersonPTag = document.querySelector(".per-person-price")
-        perPersonPTag.textContent = `R ${perPersonAmount}`
-
-    }   
+        perPersonAmount = Math.ceil(perPersonAmount * 100) / 100;
+    
+        const perPersonPTag = document.querySelector(".per-person-price");
+        perPersonPTag.textContent = `R ${perPersonAmount.toFixed(2)}`;
+    }
+    
 
     clearFileds(){
+        const clearFields = document.querySelector(".clear-fields")
+        clearFields.addEventListener("click", () => {
+            const stars = document.querySelectorAll(".ratings span");
+            stars.forEach((stars) => {
+                stars.removeAttribute("data-clicked")
+            })
 
+            const tipButtons = document.querySelectorAll(".tip-buttons button");
+            tipButtons.forEach((tip) => {
+                tip.removeAttribute("data-clicked")
+            })
+
+            const balanceAmountInput = document.querySelector("#bill-amount");
+            balanceAmountInput.style.outline = "1px solid gray"; 
+            balanceAmountInput.focus(); 
+            balanceAmountInput.value = ""
+    
+            const customTipInput = document.querySelector("#tip-amount")
+            customTipInput.style.outline = "1px solid gray"; 
+            customTipInput.focus()
+            customTipInput.value = ""
+    
+            const numberOfPeopleInput = document.querySelector("#people")
+            numberOfPeopleInput.style.outline = "1px solid gray";
+            numberOfPeopleInput.focus()
+            numberOfPeopleInput.value = ""
+    
+            const perPersonPTag = document.querySelector(".per-person-price")
+            perPersonPTag.textContent = `R ${Number(0).toFixed(2)}`
+        })
+
+   
     }
 }
 

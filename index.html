@@ -20,8 +20,7 @@
                     id="bill-amount" 
                     name="bill-amount" 
                     min="1" 
-                    max="100000" 
-                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000) this.value = '';" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000000000000) this.value = '';" 
                     placeholder="R" 
                     required
                 >
@@ -43,9 +42,8 @@
                     id="tip-amount" 
                     name="tip-amount" 
                     min="1" 
-                    max="100"
                     value="0" 
-                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100) this.value = '';" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000000000000) this.value = '';" 
                     placeholder="Tip Amount" 
                     required
                 >
@@ -59,8 +57,7 @@
                     id="people" 
                     name="people" 
                     min="1" 
-                    max="10" 
-                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 10) this.value = '';" 
+                    oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100000000000000) this.value = '';" 
                     placeholder="People" 
                     value="0" 
                     required
@@ -84,6 +81,11 @@
             <p><span class="per-person-price">R 0,00</span> <span class="per-person">/ per person</span></p>
         </div>
     </div>
+
+    <div class="clear">
+        <button class="clear-fields">Clear</button>
+    </div>
+    
 
     <script src="./src/index.js"></script>
 </body>

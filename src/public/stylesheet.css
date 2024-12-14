@@ -20,7 +20,7 @@ body {
     width: 350px;
     height: 500px; 
     
-    margin: 50px auto;
+    margin: 25px auto;
     border-radius: 8px; 
     background-color: #fff;
     display: flex;
@@ -100,7 +100,7 @@ input{
 }
 
 input:focus{
-    outline: 1px solid #FFCC00;
+    outline: 1px solid gray;
 }
 
 .ratings {
@@ -130,4 +130,9 @@ input:focus{
 
 .ratings span[data-clicked] ~ span{
     color: orange;
+}
+
+.clear-fields {
+    position: relative;
+    left: 48%;
 }
