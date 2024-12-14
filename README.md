@@ -4,5 +4,6 @@ This repository consists of 20 challenges based on **Fojan Babaali's** [20 Days 
 
 ## List Of Projects
 
--   [Color Scheme Switcher](https://github.com/MDIMACat/JavaScriptProjects/tree/Project1) 
+-   **Color Scheme Switcher**
+-   **Tip Calculator**
 
