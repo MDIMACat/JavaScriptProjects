@@ -24,19 +24,26 @@
                 <button type="submit">15%</button>
             </div>
             <div class="custom-tip">
-                <label for="Tip-amount"></label>
+                <label for="Tip-amount">Custom Amount:</label><br>
                 <input type="number" id="tip-amount" name="tip-amount" min="1" max="100" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 100) this.value = ''; " placeholder="Tip Amount" required>        
                 <button type="submit">Submit</button>
             </div>
 
             <div class="persons">
-                <label for="people-amount"> How many people are paying: </label>
-                <input type="number" id="people-amount" name="people-amount" min="1" max="10" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 10) this.value = ''; " placeholder="People" required>        
+                <label for="people-amount"> How many people are paying: </label><br>
+                <input type="number" id="people-amount" name="people-amount" min="1" max="10" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value > 10) this.value = ''; " placeholder="People" required>
+                <button type="submit">Submit</button>     
             </div>
 
             <div class="rate-service">
                 <h4>Rate Our Service:</h4>
-                <span>Star Star Star</span>
+                <div data-id="1" class="ratings">
+                    <span data-rating="5">&#9733</span>
+                    <span data-rating="4">&#9733</span>
+                    <span data-rating="3">&#9733</span>
+                    <span data-rating="2">&#9733</span>
+                    <span data-rating="1">&#9733</span>
+                </div>
             </div>
         </div>
         <div class="per-person-section">
