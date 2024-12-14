@@ -99,6 +99,10 @@ input{
     width: 200px;
 }
 
+input:focus{
+    outline: 1px solid #FFCC00;
+}
+
 .ratings {
     display: flex;
     flex-direction: row-reverse;

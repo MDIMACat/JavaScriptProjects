@@ -32,25 +32,36 @@ class TipCalculator {
     }
 
     setupBalanceAmount() {
-    
         const balanceAmountSubmitBTN = document.querySelector(".balSubBtn");
         balanceAmountSubmitBTN.addEventListener("click", () => {
-            const balanceAmount = document.querySelector("#bill-amount").value;
+            const balanceAmountInput = document.querySelector("#bill-amount");
+    
+            balanceAmountInput.style.outline = "1px solid green"; 
+            balanceAmountInput.focus(); 
+    
+            const balanceAmount = balanceAmountInput.value;
             this.setupTipButtons(balanceAmount);
         });
-        
     }
-
+    
     setupTipButtons(balanceAmount) {
         let isClicked = false
         const tipButtons = document.querySelectorAll(".tip-buttons button");
         const customTipButtons = document.querySelector(".custom-tip button");
         customTipButtons.addEventListener("click", () => {
             if(isClicked){
-                const customTip = document.querySelector("#tip-amount").value
+                const customTipInput = document.querySelector("#tip-amount")
+                customTipInput.style.outline = "1px solid green"; 
+                customTipInput.focus()
+
+                const customTip = customTipInput.value
                 this.setupNumberOfPeople(balanceAmount, customTip)
             } else {
-                const customTip = document.querySelector("#tip-amount").value
+                const customTipInput = document.querySelector("#tip-amount")
+                customTipInput.style.outline = "1px solid green"; 
+                customTipInput.focus()
+
+                const customTip = customTipInput.value
                 this.setupNumberOfPeople(balanceAmount, customTip)
                 isClicked = true;
                
@@ -79,28 +90,43 @@ class TipCalculator {
     setupNumberOfPeople(balanceAmount, tipValue) {
         const numberOfPeopleBtn = document.querySelector(".people-amount-btn");
         numberOfPeopleBtn.addEventListener("click", () => {
-            const numberOfPeople = document.querySelector("#people").value;
+            const numberOfPeopleInput = document.querySelector("#people")
+
+            numberOfPeopleInput.style.outline = "1px solid green";
+            numberOfPeopleInput.focus()
+
+            const numberOfPeople = numberOfPeopleInput.value
 
             this.calculatePerPerson(numberOfPeople, tipValue, balanceAmount)
         });
     }
 
     calculatePerPerson(numberOfPeople, tipValue, balanceAmount){
+        let perPersonAmount = 0
         const numNumberOfPeople = Number(numberOfPeople)
         const numTipValue = Number(tipValue) / 100
         const numBalanceValue  = Number(balanceAmount)
 
         const interest = numBalanceValue * numTipValue
         const totalAmount = numBalanceValue +  interest
-        const perPersonAmount = totalAmount / numNumberOfPeople
+
+        if(numNumberOfPeople === 0){
+            perPersonAmount = totalAmount
+        } else {
+            perPersonAmount = totalAmount / numNumberOfPeople
+        }
+        
 
         perPersonAmount.toFixed(2)
 
         const perPersonPTag = document.querySelector(".per-person-price")
         perPersonPTag.textContent = `R ${perPersonAmount}`
 
-
     }   
+
+    clearFileds(){
+
+    }
 }
 
 
