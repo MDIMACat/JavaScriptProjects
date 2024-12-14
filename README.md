@@ -8,9 +8,6 @@ This is a simple color scheme switcher project, that allows the user to switch c
 - **CSS**: For styling and creating a visually appealing design.
 - **JavaScript**: For switch logic and interactivity.
 
-## View Project 📺
-Please click on the following link to view project: [Color Scheme Switcher](https://mdimacat.github.io/JavaScriptProjects/)
-
 
 ## Screenshots 🖼️
  ![my screenshot](./images/Screenshot%20from%202024-12-12%2016-08-27.png)
