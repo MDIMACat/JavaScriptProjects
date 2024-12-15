@@ -1,9 +1,21 @@
-# 20 Days of JavaScript Challenge <span align="left"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="30"></span>
+# Dark and Light Mode Switcher ☀️ 🌝 
 
-This repository consists of 20 challenges based on **Fojan Babaali's** [20 Days Of JavaScript Challenge](https://github.com/fojanb/20-Days-of-JavaScript). It is meant to help beginners create small to medium JavaScript projects, boost fundamental knowledge, strengthen skills, and build confidence—all without using frameworks.
+A simple dark and light mode switcher that allows users to easily toggle between dark mode and light mode.
 
-## List Of Projects
+## Technoligies Used 🛠️
 
--   **Color Scheme Switcher**
--   **Tip Calculator**
--   **Day And Night Scheme Switcher**
+- **HTML**: To structure the web page.
+- **CSS**: For styling and creating a visually appealing design.
+- **JavaScript**: For switch logic and interactivity.
+
+
+## Screenshots 🖼️
+ **Dark Mode**
+ ![my screenshot](./images/Screenshot%20from%202024-12-15%2013-37-40.png)
+
+ **Light Mode**
+![my screenshot](./images/Screenshot%20from%202024-12-15%2013-37-46.png)
+
+### License 📄
+
+This project is licensed under the MIT License.
