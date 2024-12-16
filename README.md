@@ -7,3 +7,4 @@ This repository consists of 20 challenges based on **Fojan Babaali's** [20 Days 
 -   **Color Scheme Switcher**
 -   **Tip Calculator**
 -   **Dark and Light Mode Switcher**
+-   **Qoute Generator**
