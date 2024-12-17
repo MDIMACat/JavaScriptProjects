@@ -48,9 +48,9 @@
   .box::before {
     content: "";
     position: absolute;
-    width: 500px;
+    width: 540px;
     height: 140%;
-    /* background: linear-gradient( #5603ad, #ffd6e0); */
+    background: linear-gradient( #5603ad, #ffd6e0);
     animation: rotate 4s linear infinite;
   }
 
@@ -58,7 +58,7 @@
     content: "";
     position: absolute;
     background: #0e1538;
-    /* inset: 5px; */
+    inset: 5px;
     border-radius: 16px;
   }
 
