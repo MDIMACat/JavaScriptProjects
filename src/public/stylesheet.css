@@ -30,9 +30,17 @@
     overflow: hidden;
   }
 
+  .box h3 {
+    color: aliceblue;
+    font-size: large;
+    font-weight: 200;
+    z-index: 2;
+  }
+
   .box p {
+    margin-top: 8px;
     color: white;
-    font-size: medium;
+    font-size: small;
     z-index: 2;
   }
 
@@ -70,3 +78,7 @@
         transform: rotate(360deg);
     }
   }
+
+.quoteAuthor {
+  margin-left: 150px;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "20daychallenge",
+  "version": "1.0.0",
+  "description": "A simple quote generator to give the user inspirational quotes from people around the world",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
