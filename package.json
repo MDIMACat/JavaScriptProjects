@@ -2,8 +2,7 @@
   "name": "20daychallenge",
   "version": "1.0.0",
   "description": "A simple quote generator to give the user inspirational quotes from people around the world",
-  "main": "index.js",
-  "type": "module",
+  "main": "dom_manipulation.js",
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
@@ -12,5 +11,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
 }

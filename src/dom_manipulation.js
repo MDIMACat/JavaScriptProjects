@@ -1,26 +1,42 @@
-import { processQuotes } from "./index.js";
-
-// Render quotes on the page
-export async function renderQuotes() {
-  const quotes = await processQuotes();
-
-  if (!quotes.length) {
-    console.warn("No quotes to display.");
-    return;
-  }
-
-  const quoteBody = document.querySelector(".quoteBody");
-  const quoteAuthor = document.querySelector(".quoteAuthor");
-
-  if (quoteBody && quoteAuthor) {
-    const firstQuote = quotes[0];
-    quoteBody.textContent = firstQuote.body;
-    quoteAuthor.textContent = `— ${firstQuote.author}`;
-  } else {
-    console.warn("Required DOM elements not found.");
+const fixedValues = {
+  classes: {
+    body: ".quoteBody",
+    author: "quoteAuthor"
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderQuotes();
-});
+class Quote{
+    constructor(){
+      this.quoteBody = "";
+      this.quoteAuthor = "";
+      this.domElements  = {}
+    }
+
+    async initialize(){
+      this.initializeElements()
+      await this.getQoute()
+      cors()
+    }
+
+    initializeElements(){
+      this.domElements.quote = document.querySelector(fixedValues.classes.body)
+      this.domElements.author = document.querySelector(fixedValues.classes.author)
+    }
+
+    async getQoute() {
+      const endPoint = "https://favqs.com/api/qotd";
+    
+      const response = await fetch(endPoint);
+    
+      const data = await response.json();
+      this.domElements.quote = data.quote.body;
+      this.domElements.author = data.quote.author;
+   
+    }
+}
+
+
+if(typeof document !== undefined){
+  const quote = new Quote()
+  quote.initialize()
+}
