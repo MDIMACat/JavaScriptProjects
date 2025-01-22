@@ -15,7 +15,6 @@ class Quote{
     async initialize(){
       this.initializeElements()
       await this.getQoute()
-      cors()
     }
 
     initializeElements(){
