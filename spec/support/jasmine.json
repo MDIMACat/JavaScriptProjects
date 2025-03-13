@@ -1,0 +1,14 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+   "validate_sa_id_spec.js" 
+  ],
+  "helpers": [
+    "../src/helper_objects.js",
+    "../src/helper_function.js"
+  ],
+  "env": {
+    "stopSpecOnExpectationFailure": false,
+    "random": true
+  }
+}

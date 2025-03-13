@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "main": "./src/validate_sa_id.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "Siduduzile Snenhlanhla Mdima",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.1.0"
+  }
+}
